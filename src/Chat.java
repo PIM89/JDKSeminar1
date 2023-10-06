@@ -107,7 +107,7 @@ public class Chat extends JFrame {
 
     private void sendMsg() {
         if (!connectionStatus.getText().equals("Подключение активно") || !checkDataAuthorization()) {
-            authorization.setVisible(true);
+            JOptionPane.showMessageDialog(null, "Соединение не установлено!", "Ошибка", JOptionPane.ERROR_MESSAGE);
             typedTextField.setText(null);
             return;
         }
